@@ -1,17 +1,15 @@
 package com.rafael.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity // Para apontar para o nosso Spring que essa classe é uma tabela de Banco de Dados
-@Table(name = "endereco") // Vamos indicar o nome da nossa Tabela(caso não indique, usa como default o nome da classe)
+@Entity
+@Table(name = "endereco")
+@Builder
 public class Endereco {
 
     @Id
